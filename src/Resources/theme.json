@@ -13,5 +13,52 @@
         "app/storefront/dist/storefront/js/pauls-bikeshop-theme/pauls-bikeshop-theme.js"
     ],
     "asset": ["@Storefront", "app/storefront/dist/assets"],
-    "configInheritance": ["@Storefront", "@PaulsBikeshopTheme"]
+    "configInheritance": ["@Storefront", "@PaulsBikeshopTheme"],
+    "config": {
+        "fields": {
+            "sw-color-brand-primary": {
+                "value": "#acc90d"
+            },
+            "sw-color-brand-secondary": {
+                "value": "#f79007"
+            },
+            "sw-border-color": {
+                "value": "#dedfd6"
+            },
+            "sw-background-color": {
+                "value": "#faf9f5"
+            },
+            "sw-text-color": {
+                "value": "#292d28"
+            },
+            "sw-headline-color": {
+                "value": "#294331"
+            },
+            "sw-color-price": {
+                "value": "#292d28"
+            },
+            "sw-color-buy-button": {
+                "value": "#acc90d"
+            },
+            "sw-color-buy-button-text": {
+                "value": "#000"
+            },
+            "sw-logo-desktop": {
+                "type": "media",
+                "value": "app/storefront/dist/assets/logo/paulsbikeshop-logo.webp"
+            },
+            "sw-logo-tablet": {
+                "type": "media",
+                "value": "app/storefront/dist/assets/logo/paulsbikeshop-logo.webp"
+            },
+            "sw-logo-mobile": {
+                "type": "media",
+                "value": "app/storefront/dist/assets/logo/paulsbikeshop-logo.webp"
+            },
+            "sw-logo-favicon": {
+                "type": "media",
+                "value": "app/storefront/dist/assets/logo/favicon.png"
+            }
+        }
+    }
 }
