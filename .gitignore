@@ -1,0 +1,11 @@
+/.vscode/
+/src/Resources/app/administration/node_modules/
+/src/Resources/app/storefront/node_modules/
+/vendor/
+
+/.env.*
+/composer.lock
+/docker-compose.override.yaml
+
+/.deploy.json
+/deploy.php

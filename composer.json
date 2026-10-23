@@ -1,0 +1,65 @@
+{
+    "name": "lacknere/pauls-bikeshop-theme",
+    "description": "A professional Shopware 6 theme for Paul's Bikeshop that provides a modern and user-friendly interface.",
+    "version": "1.0.0",
+    "type": "shopware-platform-plugin",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Elias Lackner",
+            "email": "support@elias-lackner.at",
+            "homepage": "https://www.elias-lackner.at"
+        }
+    ],
+    "require": {
+        "shopware/core": "~6.7.15.0",
+        "shopware/storefront": "~6.7.15.0"
+    },
+    "require-dev": {
+        "phpstan/phpstan": "*"
+    },
+    "extra": {
+        "shopware-plugin-class": "Lacknere\\PaulsBikeshopTheme\\PaulsBikeshopTheme",
+        "copyright": "Elias Lackner",
+        "label": {
+            "en-GB": "Paul's Bikeshop theme",
+            "de-DE": "Paul's Bikeshop Theme"
+        },
+        "description": {
+            "en-GB": "A professional Shopware 6 theme for Paul's Bikeshop that provides a modern and user-friendly interface. Developed by Elias Lackner for optimal user experience and brand consistency.",
+            "de-DE": "Ein professionelles Shopware 6 Theme für Paul's Bikeshop, das eine moderne und benutzerfreundliche Oberfläche bietet. Entwickelt von Elias Lackner für optimale Benutzererfahrung."
+        },
+        "manufacturerLink": {
+            "en-GB": "https://www.elias-lackner.at",
+            "de-DE": "https://www.elias-lackner.at"
+        },
+        "supportLink": {
+            "en-GB": "https://www.elias-lackner.at/support/",
+            "de-DE": "https://www.elias-lackner.at/support/"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Lacknere\\PaulsBikeshopTheme\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "symfony/runtime": true,
+            "php-http/discovery": true
+        }
+    },
+    "scripts": {
+        "code-style:format": "@code-style:format:fix --dry-run",
+        "code-style:format:fix": "docker run --rm -v %cd%:/ext shopware/shopware-cli:latest-php-8.4 extension format /ext",
+        "code-style:ludtwig": "docker run --rm -v %cd%/src/Resources/views:/work maltejanz/ludtwig:latest .",
+        "code-style:ludtwig:fix": "@code-style:ludtwig --fix",
+        "code-style:check": "docker run --rm -v %cd%:/ext shopware/shopware-cli:latest-php-8.4 extension validate /ext",
+        "code-style": [
+            "@code-style:format",
+            "@code-style:ludtwig",
+            "@code-style:check"
+        ],
+        "snippets:check": "comparejson -e -s=\"/\" ./src/Resources/app/administration/src/**/snippet/*.json && comparejson -e -g=\"(\\w+)\\.[a-z]{2}\\.json$\" ./src/Resources/snippet/*.json"
+    }
+}
