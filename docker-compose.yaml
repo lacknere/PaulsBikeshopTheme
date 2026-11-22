@@ -1,7 +1,7 @@
 services:
   shop:
     container_name: shopware_paulsbikeshop
-    image: dockware/shopware:6.7.15.0
+    image: dockware/shopware:6.7.16.0
     ports:
       - "22:22"     # ssh
       - "80:80"     # apache2
