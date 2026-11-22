@@ -1,0 +1,13 @@
+{% sw_extends '@Storefront/storefront/layout/header/header.html.twig' %}
+
+{% block layout_header_actions_account %}
+    {% if not config('PaulsBikeshopTheme.config.preventAccount') %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block layout_header_actions_cart %}
+    {% if not config('PaulsBikeshopTheme.config.preventCart') %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

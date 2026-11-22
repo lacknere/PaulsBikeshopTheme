@@ -1,0 +1,7 @@
+{% sw_extends '@Storefront/storefront/component/buy-widget/buy-widget.html.twig' %}
+
+{% block buy_widget_buy_form %}
+    {% if not config('PaulsBikeshopTheme.config.preventCart') %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

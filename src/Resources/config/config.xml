@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/shopware/trunk/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Functionality restrictions</title>
+        <title lang="de-DE">Funktionalitäts-Einschränkungen</title>
+
+        <input-field type="bool">
+            <name>preventAccount</name>
+            <label>Prevent account</label>
+            <label lang="de-DE">Account verhindern</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>preventCart</name>
+            <label>Prevent cart</label>
+            <label lang="de-DE">Warenkorb verhindern</label>
+        </input-field>
+
+        <input-field type="bool">
+            <name>preventCheckout</name>
+            <label>Prevent Checkout</label>
+            <label lang="de-DE">Kaufabschluss verhindern</label>
+        </input-field>
+    </card>
+</config>

@@ -1,1 +1,31 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/symfony/dependency-injection/7.4/Loader/schema/services.schema.json
+services:
+    Lacknere\PaulsBikeshopTheme\Controller\AuthControllerDecorator:
+        decorates: 'Shopware\Storefront\Controller\AuthController'
+        arguments:
+            - '@.inner'
+            - '@Shopware\Core\System\SystemConfig\SystemConfigService'
+        calls:
+            - method: 'setContainer'
+              arguments:
+                  - '@service_container'
+
+    Lacknere\PaulsBikeshopTheme\Controller\CheckoutControllerDecorator:
+        decorates: 'Shopware\Storefront\Controller\CheckoutController'
+        arguments:
+            - '@.inner'
+            - '@Shopware\Core\System\SystemConfig\SystemConfigService'
+        calls:
+            - method: 'setContainer'
+              arguments:
+                  - '@service_container'
+
+    Lacknere\PaulsBikeshopTheme\Controller\RegisterControllerDecorator:
+        decorates: 'Shopware\Storefront\Controller\RegisterController'
+        arguments:
+            - '@.inner'
+            - '@Shopware\Core\System\SystemConfig\SystemConfigService'
+        calls:
+            - method: 'setContainer'
+              arguments:
+                  - '@service_container'
